@@ -129,36 +129,42 @@ const client = new MemoryClient({
 
 ## Supabase Edge Functions
 
-This SDK is designed to work seamlessly with Supabase Edge Functions:
+This SDK is fully compatible with Supabase Edge Functions:
 
 ```typescript
-// supabase/functions/remember/index.ts
+// supabase/functions/fetch_user_data/index.ts
 import { MemoryClient } from "https://deno.land/x/mem0_deno_sdk/mod.ts";
 
 const client = new MemoryClient({
-  apiKey: Deno.env.get("MEM0_API_KEY")!,
+  apiKey: Deno.env.get("MEM0_API_KEY")!
 });
 
 Deno.serve(async (req) => {
   const { messages, userId } = await req.json();
-
-  // Store the conversation as memories
-  const memories = await client.add(messages, {
-    user_id: userId,
-    version: "v2",
-  });
-
-  return new Response(JSON.stringify({ memories }), {
-    headers: { "Content-Type": "application/json" },
-  });
+  await client.add(messages, { user_id: userId });
+  return new Response("OK");
 });
 ```
 
-Set your API key as a secret:
+**Deploy to Supabase:**
 
 ```bash
+# Link your project
+supabase link --project-ref your-project-ref
+
+# Set secret
 supabase secrets set MEM0_API_KEY=your-api-key
+
+# Deploy function
+supabase functions deploy your-function-name --no-verify-jwt
+
+# Test
+curl -X POST https://your-project.supabase.co/functions/v1/your-function-name \
+  -H "Content-Type: application/json" \
+  -d '{"userId":"alice","message":"Hello!"}'
 ```
+
+See `supabase/functions/` for production-ready examples.
 
 ## Permissions
 

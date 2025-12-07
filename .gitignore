@@ -1,5 +1,4 @@
 # Deno
-deno.lock
 .deno/
 coverage/
 
@@ -7,6 +6,7 @@ coverage/
 .env
 .env.local
 .env.*.local
+supabase/.env.local
 
 # IDE
 .vscode/
