@@ -9,7 +9,7 @@
  *
  * ```bash
  * # Using deno.land/x
- * import { MemoryClient } from "https://deno.land/x/mem0_deno_sdk/mod.ts";
+ * import { MemoryClient } from "https://deno.land/x/sdk_deno_mem0/mod.ts";
  *
  * # Or add to your imports in deno.json
  * ```
@@ -17,7 +17,7 @@
  * ## Quick Start
  *
  * ```ts
- * import { MemoryClient } from "mem0-deno-sdk";
+ * import { MemoryClient } from "sdk-deno-mem0";
  *
  * // Initialize the client
  * const client = new MemoryClient({
@@ -46,7 +46,7 @@
  * This SDK is fully compatible with Supabase Edge Functions:
  *
  * ```ts
- * import { MemoryClient } from "https://deno.land/x/mem0_deno_sdk/mod.ts";
+ * import { MemoryClient } from "https://deno.land/x/sdk_deno_mem0/mod.ts";
  *
  * const client = new MemoryClient({
  *   apiKey: Deno.env.get("MEM0_API_KEY")!

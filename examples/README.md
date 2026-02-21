@@ -1,4 +1,4 @@
-# Mem0 Deno SDK Examples
+# sdk-deno-mem0 Examples
 
 This directory contains comprehensive examples demonstrating all SDK features.
 

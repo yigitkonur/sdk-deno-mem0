@@ -9,7 +9,7 @@
 // Local import (before publishing)
 import { MemoryClient } from "../mod.ts";
 // After publishing to JSR:
-// import { MemoryClient } from "@scope/mem0-deno-sdk";
+// import { MemoryClient } from "@yigitkonur/sdk-deno-mem0";
 
 const apiKey = Deno.env.get("MEM0_API_KEY");
 if (!apiKey) {

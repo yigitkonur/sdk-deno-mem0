@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial release of mem0-deno-sdk
+- Initial release of sdk-deno-mem0
 - `MemoryClient` class with full Mem0 Cloud API support
 - Memory operations: add, get, getAll, search, update, delete, deleteAll, history
 - User/entity management: users, deleteUsers

@@ -31,7 +31,7 @@ import type {
  *
  * @example
  * ```ts
- * import { MemoryClient } from "mem0-deno-sdk";
+ * import { MemoryClient } from "sdk-deno-mem0";
  *
  * const client = new MemoryClient({ apiKey: Deno.env.get("MEM0_API_KEY")! });
  *
@@ -856,7 +856,7 @@ export class MemoryClient {
    *
    * @example
    * ```ts
-   * import { Feedback } from "mem0-deno-sdk";
+   * import { Feedback } from "sdk-deno-mem0";
    *
    * await client.feedback({
    *   memory_id: "mem_123",

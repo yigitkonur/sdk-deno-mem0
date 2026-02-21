@@ -1,5 +1,5 @@
 {
-  "name": "@yigitkonur/mem0-deno-sdk",
+  "name": "@yigitkonur/sdk-deno-mem0",
   "version": "0.1.0",
   "description": "Deno SDK for Mem0 Cloud API - The Memory Layer for AI Apps",
   "license": "Apache-2.0",

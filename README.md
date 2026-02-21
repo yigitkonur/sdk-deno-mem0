@@ -14,7 +14,7 @@ const results = await client.search("what languages does the user like?", {
 ```
 
 [![deno](https://img.shields.io/badge/deno-2.x-93450a.svg?style=flat-square)](https://deno.land/)
-[![JSR](https://img.shields.io/badge/JSR-@yigitkonur/mem0--deno--sdk-93450a.svg?style=flat-square)](https://jsr.io/@yigitkonur/sdk-deno-mem0)
+[![JSR](https://img.shields.io/badge/JSR-@yigitkonur/sdk--deno--mem0-93450a.svg?style=flat-square)](https://jsr.io/@yigitkonur/sdk-deno-mem0)
 [![license](https://img.shields.io/badge/license-Apache_2.0-grey.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ---

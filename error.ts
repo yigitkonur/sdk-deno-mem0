@@ -6,7 +6,7 @@
  *
  * @example
  * ```ts
- * import { MemoryClient, APIError } from "mem0-deno-sdk";
+ * import { MemoryClient, APIError } from "sdk-deno-mem0";
  *
  * const client = new MemoryClient({ apiKey: "your-key" });
  *
