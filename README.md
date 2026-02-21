@@ -14,7 +14,7 @@ const results = await client.search("what languages does the user like?", {
 ```
 
 [![deno](https://img.shields.io/badge/deno-2.x-93450a.svg?style=flat-square)](https://deno.land/)
-[![JSR](https://img.shields.io/badge/JSR-@yigitkonur/mem0--deno--sdk-93450a.svg?style=flat-square)](https://jsr.io/@yigitkonur/mem0-deno-sdk)
+[![JSR](https://img.shields.io/badge/JSR-@yigitkonur/mem0--deno--sdk-93450a.svg?style=flat-square)](https://jsr.io/@yigitkonur/sdk-deno-mem0)
 [![license](https://img.shields.io/badge/license-Apache_2.0-grey.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ---
@@ -39,7 +39,7 @@ zero runtime dependencies. only uses Deno built-ins (`fetch`, `AbortSignal`, `UR
 ## install
 
 ```ts
-import { MemoryClient } from "jsr:@yigitkonur/mem0-deno-sdk";
+import { MemoryClient } from "jsr:@yigitkonur/sdk-deno-mem0";
 ```
 
 or add to `deno.json`:
@@ -47,7 +47,7 @@ or add to `deno.json`:
 ```json
 {
   "imports": {
-    "mem0": "jsr:@yigitkonur/mem0-deno-sdk"
+    "mem0": "jsr:@yigitkonur/sdk-deno-mem0"
   }
 }
 ```
@@ -81,7 +81,7 @@ const results = await client.search("what is the user working on?", {
 ### v2 compound filters
 
 ```ts
-import { API_VERSION } from "jsr:@yigitkonur/mem0-deno-sdk";
+import { API_VERSION } from "jsr:@yigitkonur/sdk-deno-mem0";
 
 const results = await client.search("preferences", {
   api_version: API_VERSION.V2,
@@ -129,7 +129,7 @@ await client.createWebhook({ url: "https://example.com/hook", event_type: "memor
 ### supabase edge function
 
 ```ts
-import { MemoryClient } from "jsr:@yigitkonur/mem0-deno-sdk";
+import { MemoryClient } from "jsr:@yigitkonur/sdk-deno-mem0";
 
 const mem0 = new MemoryClient({ apiKey: Deno.env.get("MEM0_API_KEY")! });
 
@@ -183,7 +183,7 @@ commonly used fields when calling `add`, `getAll`, `search`, `deleteAll`:
 ## error handling
 
 ```ts
-import { MemoryClient, APIError } from "jsr:@yigitkonur/mem0-deno-sdk";
+import { MemoryClient, APIError } from "jsr:@yigitkonur/sdk-deno-mem0";
 
 try {
   await client.get("nonexistent-id");
