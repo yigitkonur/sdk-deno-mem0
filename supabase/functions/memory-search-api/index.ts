@@ -7,7 +7,7 @@
  * Deploy: supabase functions deploy memory-search-api
  */
 
-import { MemoryClient, APIError } from "../../../mod.ts";
+import { APIError, MemoryClient } from "../../../mod.ts";
 
 const mem0 = new MemoryClient({
   apiKey: Deno.env.get("MEM0_API_KEY")!,

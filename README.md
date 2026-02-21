@@ -5,7 +5,7 @@ const client = new MemoryClient({ apiKey: Deno.env.get("MEM0_API_KEY")! });
 
 await client.add(
   [{ role: "user", content: "I prefer TypeScript over JavaScript" }],
-  { user_id: "alice" }
+  { user_id: "alice" },
 );
 
 const results = await client.search("what languages does the user like?", {
@@ -64,7 +64,7 @@ await client.add(
     { role: "user", content: "I'm working on a Rust project" },
     { role: "assistant", content: "nice, what kind of project?" },
   ],
-  { user_id: "alice", metadata: { source: "onboarding" } }
+  { user_id: "alice", metadata: { source: "onboarding" } },
 );
 ```
 
@@ -145,12 +145,12 @@ Deno.serve(async (req) => {
 
 ### client options
 
-| option | type | required | default | description |
-|:---|:---|:---|:---|:---|
-| `apiKey` | `string` | yes | — | Mem0 API key. validated on construction |
-| `host` | `string` | no | `https://api.mem0.ai` | override base URL |
-| `organizationId` | `string` | no | — | required for project/webhook methods |
-| `projectId` | `string` | no | — | required for project/webhook methods |
+| option           | type     | required | default               | description                             |
+| :--------------- | :------- | :------- | :-------------------- | :-------------------------------------- |
+| `apiKey`         | `string` | yes      | —                     | Mem0 API key. validated on construction |
+| `host`           | `string` | no       | `https://api.mem0.ai` | override base URL                       |
+| `organizationId` | `string` | no       | —                     | required for project/webhook methods    |
+| `projectId`      | `string` | no       | —                     | required for project/webhook methods    |
 
 timeout is hardcoded at 60s. auth header format is `Token {apiKey}` (Django REST Framework style).
 
@@ -158,38 +158,38 @@ timeout is hardcoded at 60s. auth header format is `Token {apiKey}` (Django REST
 
 commonly used fields when calling `add`, `getAll`, `search`, `deleteAll`:
 
-| field | description |
-|:---|:---|
-| `user_id` | scope to a specific user |
-| `agent_id` | scope to a specific agent |
-| `run_id` | scope to a specific run/session |
-| `api_version` | `"v1"` or `"v2"` — v2 enables JSON body filters |
-| `metadata` | arbitrary key-value pairs attached to memories |
-| `filters` | v2 compound filters (`AND`/`OR` logic) |
-| `page` / `page_size` | pagination |
-| `output_format` | `"v1.0"` or `"v1.1"` response format |
+| field                | description                                     |
+| :------------------- | :---------------------------------------------- |
+| `user_id`            | scope to a specific user                        |
+| `agent_id`           | scope to a specific agent                       |
+| `run_id`             | scope to a specific run/session                 |
+| `api_version`        | `"v1"` or `"v2"` — v2 enables JSON body filters |
+| `metadata`           | arbitrary key-value pairs attached to memories  |
+| `filters`            | v2 compound filters (`AND`/`OR` logic)          |
+| `page` / `page_size` | pagination                                      |
+| `output_format`      | `"v1.0"` or `"v1.1"` response format            |
 
 ### search-specific options
 
-| field | description |
-|:---|:---|
-| `limit` | max results |
-| `threshold` | similarity score cutoff |
-| `top_k` | top-k retrieval |
+| field            | description                 |
+| :--------------- | :-------------------------- |
+| `limit`          | max results                 |
+| `threshold`      | similarity score cutoff     |
+| `top_k`          | top-k retrieval             |
 | `keyword_search` | enable keyword-based search |
-| `rerank` | re-rank results |
-| `categories` | filter by memory categories |
+| `rerank`         | re-rank results             |
+| `categories`     | filter by memory categories |
 
 ## error handling
 
 ```ts
-import { MemoryClient, APIError } from "jsr:@yigitkonur/sdk-deno-mem0";
+import { APIError, MemoryClient } from "jsr:@yigitkonur/sdk-deno-mem0";
 
 try {
   await client.get("nonexistent-id");
 } catch (error) {
   if (error instanceof APIError) {
-    console.log(error.status);  // 404
+    console.log(error.status); // 404
     console.log(error.message); // "API request failed with status 404: Not found"
   }
 }

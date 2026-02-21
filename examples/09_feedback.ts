@@ -6,7 +6,7 @@
  * Run: deno run --allow-net --allow-env examples/09_feedback.ts
  */
 
-import { MemoryClient, Feedback } from "../mod.ts";
+import { Feedback, MemoryClient } from "../mod.ts";
 
 const apiKey = Deno.env.get("MEM0_API_KEY");
 if (!apiKey) {

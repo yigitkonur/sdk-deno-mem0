@@ -50,7 +50,7 @@ Deno.serve(async (req) => {
     // 1. Search for relevant memories
     let context = "";
     let relevantMemories: Array<any> = [];
-    
+
     if (includeContext) {
       relevantMemories = await mem0.search(message, {
         user_id: userId,

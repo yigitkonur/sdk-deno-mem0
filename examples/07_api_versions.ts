@@ -6,7 +6,7 @@
  * Run: deno run --allow-net --allow-env examples/07_api_versions.ts
  */
 
-import { MemoryClient, API_VERSION } from "../mod.ts";
+import { API_VERSION, MemoryClient } from "../mod.ts";
 
 const apiKey = Deno.env.get("MEM0_API_KEY");
 if (!apiKey) {

@@ -6,7 +6,7 @@
  * Run: deno run --allow-net --allow-env examples/08_error_handling.ts
  */
 
-import { MemoryClient, APIError } from "../mod.ts";
+import { APIError, MemoryClient } from "../mod.ts";
 
 const apiKey = Deno.env.get("MEM0_API_KEY");
 if (!apiKey) {

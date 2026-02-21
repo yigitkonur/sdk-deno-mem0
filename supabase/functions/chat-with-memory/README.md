@@ -45,6 +45,7 @@ supabase functions deploy chat-with-memory
 **Endpoint:** `POST /functions/v1/chat-with-memory`
 
 **Request:**
+
 ```json
 {
   "userId": "string",
@@ -54,6 +55,7 @@ supabase functions deploy chat-with-memory
 ```
 
 **Response:**
+
 ```json
 {
   "response": "string",

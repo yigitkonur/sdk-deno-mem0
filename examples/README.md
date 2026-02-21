@@ -13,14 +13,14 @@ deno run --allow-net --allow-env examples/01_basic_usage.ts
 
 ## Example Index
 
-| File | Methods Demonstrated | Description |
-|------|---------------------|-------------|
-| `01_basic_usage.ts` | add, get, search | Quick start guide |
-| `02_memory_management.ts` | update, delete, deleteAll, history | CRUD operations |
-| `03_user_operations.ts` | users, deleteUsers | Entity management |
-| `04_batch_operations.ts` | batchUpdate, batchDelete | Bulk operations |
-| `05_pagination.ts` | getAll with pages | Handling large datasets |
-| `06_webhooks.ts` | webhook CRUD | Event subscriptions |
+| File                      | Methods Demonstrated               | Description             |
+| ------------------------- | ---------------------------------- | ----------------------- |
+| `01_basic_usage.ts`       | add, get, search                   | Quick start guide       |
+| `02_memory_management.ts` | update, delete, deleteAll, history | CRUD operations         |
+| `03_user_operations.ts`   | users, deleteUsers                 | Entity management       |
+| `04_batch_operations.ts`  | batchUpdate, batchDelete           | Bulk operations         |
+| `05_pagination.ts`        | getAll with pages                  | Handling large datasets |
+| `06_webhooks.ts`          | webhook CRUD                       | Event subscriptions     |
 
 ## Quick Test
 
